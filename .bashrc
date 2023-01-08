@@ -94,8 +94,18 @@ alias l='ls -CF'
 
 # nvim aliases 
 alias v='nvim'
-# git aliases 
+# git aliases  
 alias ga='git commit --amend'
+
+# some useful commands for easy lookup 
+
+# Use the following command to remove all branches with PREFIX prefix on remote server (https://stackoverflow.com/questions/10555136/delete-multiple-remote-branches-in-git) 
+
+# git branch -r | awk -F/ '/\/PREFIX/{print $2}' | xargs -I {} git push origin :{}'
+# To check if they re really the branch you want to remove 
+# git branch -r | awk -F/ '/\/PREFIX/{print $2}'
+
+
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
