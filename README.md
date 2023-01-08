@@ -2,7 +2,7 @@
 
 ### Symlinking
 ``
-ln -s -f ~Desktop/Dotfiles/.bashrc ~/.bashrc
+ln -s -f ~/Desktop/Dotfiles/.bashrc ~/
 ``
 
 

@@ -1,0 +1,7 @@
+[commit]
+	template = /home/florin/.gitmessage
+[user]
+	email = florin.g.ungureanu@gmail.com
+	name = Florin-Catalin
+[core]
+	editor = nvim
