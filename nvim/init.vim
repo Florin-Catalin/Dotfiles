@@ -8,8 +8,6 @@
 :set mouse=a
 
 call plug#begin()
-" Retro theme
-Plug 'morhetz/gruvbox' 
 Plug 'vim-airline/vim-airline'
 " LaTex 
 Plug 'lervag/vimtex'
@@ -21,6 +19,11 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
 " Code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Command-line fuzzy finder 
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Floating window 
+Plug 'voldikss/vim-floaterm'
 call plug#end()
 
 " Nerd Tree open at startup 
@@ -220,3 +223,14 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+" Fzf keybing 
+nnoremap <C-p> :Files <Cr>
+" Fzf bottom layout 
+let g:fzf_layout = { 'down': '40%' }
+
+" Vim-floaterm keybing
+" new 
+let g:floaterm_keymap_new = '<Leader>ft'
+" toggle
+let g:floaterm_keymap_toggle = '<Leader>t'
