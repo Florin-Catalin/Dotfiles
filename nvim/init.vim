@@ -26,12 +26,14 @@ Plug 'junegunn/fzf.vim'
 Plug 'voldikss/vim-floaterm'
 call plug#end()
 
+" Marker based folding in vim files
+autocmd FileType vim setlocal foldmethod=marker 
 " Nerd Tree open at startup 
 autocmd VimEnter * NERDTree
 " Nerd Tree closing 
 autocmd bufenter * if(winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" VimTex configurations 
+" VimTex configurations {{{ 
 "
 " This is necessary for VimTeX to load properly. The "indent" is optional.
 " Note that most plugin managers will do this automatically.
@@ -60,7 +62,10 @@ let g:vimtex_view_general_options = '--unique file:@pdf\#src:@line@tex'
 " Most VimTeX mappings rely on localleader and this can be changed with the
 " following line. The default is usually fine and is the symbol "\".
 let maplocalleader = ","
+"}}}
 
+"CoC Config {{{
+"
 " Coc configuration example 
 
 " May need for Vim (not Neovim) since coc.nvim calculates byte offset by count
@@ -223,14 +228,19 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+"}}}
 
+" Fzf Config {{{
+"
 " Fzf keybing 
 nnoremap <C-p> :Files <Cr>
 " Fzf bottom layout 
 let g:fzf_layout = { 'down': '40%' }
+"}}} 
 
-" Vim-floaterm keybing
+" Vim-floaterm keybing {{{
 " new 
 let g:floaterm_keymap_new = '<Leader>ft'
 " toggle
 let g:floaterm_keymap_toggle = '<Leader>t'
+"}}}
