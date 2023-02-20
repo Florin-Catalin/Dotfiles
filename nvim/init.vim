@@ -8,6 +8,11 @@
 :set mouse=a
 
 call plug#begin()
+" CMake 
+Plug 'cdelledonne/vim-cmake'
+" GTest
+Plug 'alepez/vim-gtest'
+" Status bar 
 Plug 'vim-airline/vim-airline'
 " LaTex 
 Plug 'lervag/vimtex'
@@ -239,8 +244,22 @@ let g:fzf_layout = { 'down': '40%' }
 "}}} 
 
 " Vim-floaterm keybing {{{
+let g:floaterm_position = 'bottom'
+let g:floaterm_width = 1.0 
+let g:floaterm_height = 0.4 
+
 " new 
 let g:floaterm_keymap_new = '<Leader>ft'
 " toggle
 let g:floaterm_keymap_toggle = '<Leader>t'
+nmap <c-t> :FloatermNew fff<cr>
 "}}}
+
+" CMake & GTest config {{{
+
+let g:cmake_link_compile_commands = 1
+
+nmap <leader>cg :CMakeGenerate<cr>
+nmap <leader>cb :CMakeGenerate<cr> 
+nmap <leader>gt :GTestRunUnderCursor<cr>
+"}}} 
