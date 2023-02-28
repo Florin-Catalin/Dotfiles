@@ -97,6 +97,12 @@ alias v='nvim'
 # git aliases  
 alias ga='git commit --amend'
 
+# aliases for xclip
+alias copy="xclip -sel clip"
+alias paste="xclip -sel clip -o"
+#indent the clipboard
+paste | sed 's/^/    /' | copy
+
 # some useful commands for easy lookup 
 
 # Use the following command to remove all branches with PREFIX prefix on remote server (https://stackoverflow.com/questions/10555136/delete-multiple-remote-branches-in-git) 
