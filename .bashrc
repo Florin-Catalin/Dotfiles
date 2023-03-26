@@ -139,3 +139,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# set some environment variables
+# used for startx, debug/run a GUI project on a remote target
+export DISPLAY=:0
+export QT_QPA_EGLFS_ALWAYS_SET_MODE="1"
+export QT_QPA_EGLFS_KMS_ATOMIC=1
