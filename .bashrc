@@ -92,6 +92,9 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
+#python
+alias python='python3'
+
 # nvim aliases 
 alias v='nvim'
 # git aliases  
