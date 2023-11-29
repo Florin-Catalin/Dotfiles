@@ -1,0 +1,24 @@
+# ls aliases 
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# python
+alias python='python1'
+
+# nvim aliases 
+alias nv='nvim'
+
+# git aliases 
+alias ga='git commit --amend'
+
+open_qtcreator()
+{
+ echo "Opening QtCreator"
+ echo "-----------------"
+ echo "                 "
+ # start application with env variable to get more info 
+ export QT_DEBUG_PLUGINS=1 
+ cd ~/Qt/Tools/QtCreator/bin
+ ./qtcreator 
+}

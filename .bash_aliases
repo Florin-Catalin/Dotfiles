@@ -7,7 +7,7 @@ alias l='ls -CF'
 alias python='python1'
 
 # nvim aliases 
-alias v='nvim'
+alias nv='nvim'
 # git aliases  
 alias ga='git commit --amend'
 

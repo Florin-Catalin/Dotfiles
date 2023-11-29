@@ -126,3 +126,7 @@ fi
 export DISPLAY=:0
 export QT_QPA_EGLFS_ALWAYS_SET_MODE="1"
 export QT_QPA_EGLFS_KMS_ATOMIC=1
+
+# LLVM_INSTALL_DIR should contain /usr/lib/clang/<VERSION>
+# https://doc.qt.io/qt-5/qdoc-guide-clang.html
+export LLVM_INSTALL_DIR=/usr/lib/clang/12

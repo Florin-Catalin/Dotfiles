@@ -99,3 +99,19 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+#
+
+# alias definitions
+if [ -f ~/.zsh_aliases ]; then
+	. ~/.zsh_aliases
+fi
+
+# set some environment variable
+# used for statx, debung/run a GUI project on a remote target
+export DISPLAY=:0
+export QT_QPA_EGLFS_ALWAYS_SET_MODE="1"
+export QT_QPA_EGLFS_KMS_ATOMIC=1
+
+# LLVM_INSTALL_DIR should contian /usr/lib/clang/<VERSION>
+export LLVM_INSTALL_DIR=/usr/lib/clang/12
